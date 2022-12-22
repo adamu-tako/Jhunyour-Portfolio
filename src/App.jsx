@@ -7,6 +7,7 @@ import AboutMe from "./components/about/about";
 import ContactMe from "./components/contact/contact";
 import Footer from "./components/footer";
 import Home from "./components/landingPage";
+import Bg from "./assets/background.png";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,7 +15,13 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
-      <Box bgColor="#f3f5f8" minH="100vh" fontFamily="primary">
+      <Box
+        bgImage={Bg}
+        bgSize="cover"
+        bgRepeat="no-repeat"
+        minH="100vh"
+        fontFamily="primary"
+      >
         <Navbar />
         <Box>
           <Routes>
