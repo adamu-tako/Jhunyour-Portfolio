@@ -16,14 +16,18 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box
+        zIndex="1"
         bgImage={Bg}
+        bgPosition="fixed"
         bgSize="cover"
         bgRepeat="no-repeat"
         minH="100vh"
         fontFamily="primary"
       >
-        <Navbar />
-        <Box>
+        <Box position="fixed" w="100vw" zIndex={99}>
+          <Navbar />
+        </Box>
+        <Box pt="3rem">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-me" element={<AboutMe />} />

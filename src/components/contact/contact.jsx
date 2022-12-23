@@ -38,7 +38,11 @@ const ContactMe = () => {
       bgColor="transparent"
       alignItems="center"
     >
-      <FormControl textAlign="center" w="40%" onSubmit={sendMessage}>
+      <FormControl
+        textAlign="center"
+        w={{ base: "90%", md: "40%" }}
+        onSubmit={sendMessage}
+      >
         <Heading marginY="1rem" textDecoration="underline" fontSize="1.25rem">
           Contact Me
         </Heading>

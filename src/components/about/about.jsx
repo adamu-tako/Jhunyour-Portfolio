@@ -26,7 +26,11 @@ const AboutMe = () => {
     navigate("/contact-me");
   };
   return (
-    <Box paddingInline={{ base: "2rem", md: "6rem" }} bgColor="white">
+    <Box
+      paddingInline={{ base: "2rem", md: "6rem" }}
+      mt="1.5rem"
+      bgColor="white"
+    >
       <Box
         paddingBlock={{ base: "1rem", md: "2.5rem" }}
         display={{ base: "column", md: "flex" }}
@@ -41,7 +45,11 @@ const AboutMe = () => {
           >
             Meet Muhammad Junior Adamu
           </Heading>
-          <Box width={{ base: "100%", md: "90%" }}>
+          <Box
+            fontSize={{ base: ".8rem", md: "1rem" }}
+            width={{ base: "100%", md: "90%" }}
+            lineHeight="2rem"
+          >
             <Text>
               Hello, I am a passionate product and brand designer with four
               years of experience in design. I have contributed to the growth of
@@ -112,7 +120,7 @@ const AboutMe = () => {
           width="100%"
           display={{ base: "flex", md: "none" }}
         >
-          <Accordion minWidth="100vw">
+          <Accordion minWidth="90vw">
             {Resume.map((tab, i) => (
               <AccordionItem key={i}>
                 <h2>

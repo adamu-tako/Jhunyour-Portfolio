@@ -22,6 +22,10 @@ const Navbar = () => {
     return isActive ? activeClassName : notActiveClass;
   };
 
+  const viewResume = () => {
+    document.location = "https://www.google.com";
+  };
+
   return (
     <>
       <Flex
@@ -32,12 +36,13 @@ const Navbar = () => {
         alignItems="center"
         paddingInline={{ base: "1.5rem", md: "6rem" }}
         zIndex="99"
+        width="100vw"
       >
         <Box>
           <NavLink to="/">
-            <Heading fontWeight="600" color="primary" fontSize="1.5rem">
+            <Text fontWeight="600" color="primary" fontSize="1.5rem">
               Jhunyour
-            </Heading>
+            </Text>
           </NavLink>
         </Box>
         <Flex
@@ -63,6 +68,7 @@ const Navbar = () => {
               _active={{ bgColor: "secondary" }}
               bgColor="primary"
               color="white"
+              onClick={viewResume}
             >
               Resume
             </Button>
@@ -77,8 +83,9 @@ const Navbar = () => {
       </Flex>
       {navToggle ? (
         <Box
-          zIndex="99"
-          display="flex"
+          zIndex="100"
+          brightness={12}
+          display={{ base: "flex", md: "none" }}
           flexDir="column"
           alignItems="center"
           width="100%"
@@ -87,6 +94,7 @@ const Navbar = () => {
           top="0"
           bgColor="black"
           justifyContent="space-between"
+          onClick={() => setNavToggle(false)}
         >
           <Box
             position="absolute"
@@ -105,7 +113,7 @@ const Navbar = () => {
             alignSelf="center"
             justifyContent="center"
             width="fit-content"
-            mt="25rem"
+            mt="15rem"
           >
             <NavLink border="2px solid green" style={styleActiveLink} to="/">
               <Text color="white">Project</Text>
@@ -116,6 +124,16 @@ const Navbar = () => {
             <NavLink style={styleActiveLink} to="/contact-me">
               <Text color="white">Contact Me</Text>
             </NavLink>
+            <Button
+              mt="1rem"
+              colorScheme="primary"
+              _active={{ bgColor: "secondary" }}
+              bgColor="primary"
+              color="white"
+              onClick={viewResume}
+            >
+              Resume
+            </Button>
           </Box>
           <Flex color="white">
             <SocialIcons />
