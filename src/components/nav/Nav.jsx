@@ -136,7 +136,7 @@ const Navbar = () => {
             </Button>
           </Box>
           <Flex color="white">
-            <SocialIcons />
+            <SocialIcons whyte="whyte" />
           </Flex>
         </Box>
       ) : null}

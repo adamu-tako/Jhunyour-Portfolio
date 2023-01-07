@@ -35,9 +35,9 @@ const Home = () => {
         width={{ base: "100vw", md: "100%" }}
       >
         <Box
+          paddingTop={{ base: "4rem", md: "5rem" }}
           minH="80vh"
           width="90%"
-          paddingY={{ base: "4rem", md: "2rem" }}
           marginInline="auto"
         >
           <Box display="flex" justifyContent="space-between">
@@ -151,7 +151,7 @@ const Home = () => {
           bottom="0"
           left="0"
           right="0"
-          top={{ base: "2vh", md: "85vh" }}
+          top={{ base: "2vh", md: "80vh" }}
           alignItems="center"
           display={{ base: "none", md: "flex" }}
           color="primary"
