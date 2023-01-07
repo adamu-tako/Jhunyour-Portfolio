@@ -8,6 +8,7 @@ import ContactMe from "./components/contact/contact";
 import Footer from "./components/footer";
 import Home from "./components/landingPage";
 import Bg from "./assets/background.png";
+import Anime from "./components/framer/anime";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,15 +25,18 @@ function App() {
         minH="100vh"
         fontFamily="primary"
       >
-        <Box position="fixed" w="100vw" zIndex={99}>
-          <Navbar />
-        </Box>
-        <Box pt="3rem">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about-me" element={<AboutMe />} />
-            <Route path="/contact-me" element={<ContactMe />} />
-          </Routes>
+        <Box minH="calc(100vh - 100px)">
+          <Box position="fixed" w="100vw" zIndex={99}>
+            <Navbar />
+          </Box>
+          <Box pt="3rem">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about-me" element={<AboutMe />} />
+              <Route path="/contact-me" element={<ContactMe />} />
+              <Route path="/anime" element={<Anime />} />
+            </Routes>
+          </Box>
         </Box>
         {pathname !== "/" ? <Footer /> : null}
       </Box>

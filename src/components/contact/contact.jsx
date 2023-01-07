@@ -30,7 +30,6 @@ const ContactMe = () => {
   };
   return (
     <Box
-      marginBlock="1rem"
       justifyContent="center"
       display="flex"
       flexDir="column"
