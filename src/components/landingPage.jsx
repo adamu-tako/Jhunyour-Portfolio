@@ -157,7 +157,7 @@ const Home = () => {
           color="primary"
           bgColor="#FCD53F"
           h="2rem"
-          marginTop="3rem"
+          marginTop="2rem"
         >
           <marquee>
             \\Scroll Down to See Projects \\ Scroll Down to See Projects \\
