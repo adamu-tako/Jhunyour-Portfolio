@@ -121,6 +121,8 @@ const Home = () => {
                       _active={{ bgColor: "primary" }}
                       bgColor="transparent"
                       color="primary"
+                      h="2.5rem"
+                      fontWeight="normal"
                       border="2px solid #093450"
                       fontSize={{ base: ".8rem", md: "1rem" }}
                     >
@@ -132,6 +134,8 @@ const Home = () => {
                       fontSize={{ base: ".8rem", md: "1rem" }}
                       width={{ base: "8rem", md: "15rem" }}
                       colorScheme="primary"
+                      h="2.5rem"
+                      fontWeight="normal"
                       _active={{ bgColor: "secondary" }}
                       bgColor="primary"
                       color="white"

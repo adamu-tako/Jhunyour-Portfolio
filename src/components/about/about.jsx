@@ -120,6 +120,8 @@ const AboutMe = () => {
               colorScheme="primary"
               _active={{ bgColor: "secondary" }}
               bgColor="primary"
+              h="2.5rem"
+              fontWeight="normal"
               color="white"
               onClick={contactMe}
             >

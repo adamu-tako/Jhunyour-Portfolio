@@ -68,6 +68,8 @@ const Navbar = () => {
               _active={{ bgColor: "secondary" }}
               bgColor="primary"
               color="white"
+              h="2.5rem"
+              fontWeight="normal"
               onClick={viewResume}
             >
               Resume
@@ -127,6 +129,8 @@ const Navbar = () => {
             <Button
               mt="1rem"
               colorScheme="primary"
+              h="2.5rem"
+              fontWeight="normal"
               _active={{ bgColor: "secondary" }}
               bgColor="primary"
               color="white"

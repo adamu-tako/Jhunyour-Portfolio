@@ -52,6 +52,10 @@ const ContactMe = () => {
             value={messageForm.name}
             type="text"
             bgColor="white"
+            _focus={{
+              border: "1px solid #093450",
+              boxShadow: "none",
+            }}
             placeholder="Your Name"
             onChange={(e) => handleInput("name", e.target.value)}
           />
@@ -62,6 +66,10 @@ const ContactMe = () => {
             value={messageForm.email}
             type="text"
             bgColor="white"
+            _focus={{
+              border: "1px solid #093450",
+              boxShadow: "none",
+            }}
             placeholder="Your Email Address"
             onChange={(e) => handleInput("email", e.target.value)}
           />
@@ -72,6 +80,10 @@ const ContactMe = () => {
             value={messageForm.message}
             height="8rem"
             type="text"
+            _focus={{
+              border: "1px solid #093450",
+              boxShadow: "none",
+            }}
             bgColor="white"
             placeholder="Your Message"
             onChange={(e) => handleInput("message", e.target.value)}
@@ -84,6 +96,8 @@ const ContactMe = () => {
             _active={{ bgColor: "secondary" }}
             bgColor="primary"
             color="white"
+            h="2.5rem"
+            fontWeight="normal"
             onClick={sendMessage}
           >
             Resume

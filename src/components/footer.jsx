@@ -12,7 +12,7 @@ const Footer = () => {
       alignItems="center"
       bg={`${pathname === "/contact-me" ? "transparent" : "white"}`}
     >
-      <Box>
+      <Box w="30vw">
         <SocialIcons />
       </Box>
       <Text marginBlock="1rem">Jhunyouur@gmail.com</Text>
