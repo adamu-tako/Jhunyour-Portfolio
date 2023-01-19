@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import Jhunyour from "../../assets/jhunyour.png";
+import Jhunyour from "../../assets/jhunyour.webp";
 import { Resume } from "../../assets/resume";
 import SocialIcons from "../socialIcons";
 

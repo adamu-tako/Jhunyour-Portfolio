@@ -7,7 +7,7 @@ import AboutMe from "./components/about/about";
 import ContactMe from "./components/contact/contact";
 import Footer from "./components/footer";
 import Home from "./components/landingPage";
-import Bg from "./assets/background.png";
+import Bg from "./assets/background.webp";
 import Anime from "./components/framer/anime";
 
 function App() {
