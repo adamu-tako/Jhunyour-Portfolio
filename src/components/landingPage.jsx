@@ -151,12 +151,13 @@ const Home = () => {
           bottom="0"
           left="0"
           right="0"
-          top={{ base: "3vh", md: "80vh" }}
+          top={{ base: "2vh", md: "80vh" }}
           alignItems="center"
           display={{ base: "none", md: "flex" }}
           color="primary"
           bgColor="#FCD53F"
           h="2rem"
+          marginTop="3rem"
         >
           <marquee>
             \\Scroll Down to See Projects \\ Scroll Down to See Projects \\
