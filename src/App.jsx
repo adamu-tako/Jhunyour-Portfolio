@@ -9,6 +9,7 @@ import Footer from "./components/footer";
 import Home from "./components/landingPage";
 import Bg from "./assets/background.webp";
 import Anime from "./components/framer/anime";
+import ProjectPage from "./components/projects/projectPage";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -35,6 +36,7 @@ function App() {
               <Route path="/about-me" element={<AboutMe />} />
               <Route path="/contact-me" element={<ContactMe />} />
               <Route path="/anime" element={<Anime />} />
+              <Route path="/projects/:id" element={<ProjectPage />} />
             </Routes>
           </Box>
         </Box>

@@ -52,7 +52,7 @@ const Navbar = () => {
           alignItems="center"
         >
           <Flex w="20rem" justifyContent="space-around">
-            <NavLink style={styleActiveLink} to="/">
+            <NavLink style={styleActiveLink} to="/#projects">
               <Text color="primary">Project</Text>
             </NavLink>
             <NavLink style={styleActiveLink} to="/about-me">

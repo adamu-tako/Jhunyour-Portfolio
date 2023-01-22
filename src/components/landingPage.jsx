@@ -4,9 +4,13 @@ import Jay from "../assets/jay.svg";
 import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import ProjectView from "./projects/projectView";
+import Footer from "./footer";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
@@ -25,6 +29,17 @@ const Home = () => {
       setIsVisible(true);
     }
   };
+
+  useEffect(() => {
+    if (location.hash) {
+      let elem = document.getElementById(location.hash.slice(1));
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  }, [location]);
 
   return (
     <>
@@ -172,13 +187,20 @@ const Home = () => {
         </Box>
       )}
       <Box
-        zIndex={1}
+        id="projects"
+        zIndex={999}
         position="relative"
         top={{ base: "75vh", md: "85vh" }}
         h="80vh"
-        bgColor="primary"
+        bgColor="white"
+        p="1rem"
       >
-        Overlay me on the other content
+        <Box bgColor="white">
+          <Box marginBottom="2rem" marginInline="auto" w="fit-content">
+            <ProjectView />
+          </Box>
+          <Footer />
+        </Box>
       </Box>
     </>
   );

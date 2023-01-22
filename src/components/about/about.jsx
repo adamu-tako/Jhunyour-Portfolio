@@ -101,8 +101,9 @@ const AboutMe = () => {
               Hello, I am a passionate product and brand designer with four
               years of experience in design. I have contributed to the growth of
               startups and also involved in improving the experiences and
-              usability of digital products accross E-commerce, Fintech, Edtech,
-              Medtech, dashboards, mobile apps, websites and operating systems.
+              usability of digital products accross E-commerce, Fintech,
+              Edutech, Medtech, dashboards, mobile apps, websites and operating
+              systems.
             </Text>
             <Text as={motion.p} variants={listVariant} marginBlock="1rem">
               I also founded a non-profit design circle where i mentor newbies
