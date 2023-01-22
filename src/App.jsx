@@ -23,7 +23,7 @@ function App() {
         bgPosition="fixed"
         bgSize="cover"
         bgRepeat="no-repeat"
-        minH="100vh"
+        minH="30vh"
         fontFamily="primary"
       >
         <Box minH="calc(100vh - 100px)">
