@@ -26,8 +26,8 @@ function App() {
         minH="30vh"
         fontFamily="primary"
       >
-        <Box minH="calc(100vh - 100px)">
-          <Box position="fixed" w="100vw" zIndex={99}>
+        <Box minH="calc(80vh - 100px)">
+          <Box position="fixed" w="100vw" zIndex={100}>
             <Navbar />
           </Box>
           <Box pt="3rem">

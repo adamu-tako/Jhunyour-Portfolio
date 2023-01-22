@@ -85,7 +85,7 @@ const Navbar = () => {
       </Flex>
       {navToggle ? (
         <Box
-          zIndex="100"
+          zIndex="999"
           brightness={12}
           display={{ base: "flex", md: "none" }}
           flexDir="column"
@@ -113,9 +113,10 @@ const Navbar = () => {
             display="flex"
             flexDir="column"
             alignSelf="center"
-            justifyContent="center"
+            justifyContent="space-around"
             width="fit-content"
             mt="15rem"
+            h="20vh"
           >
             <NavLink border="2px solid green" style={styleActiveLink} to="/">
               <Text color="white">Project</Text>
@@ -126,19 +127,19 @@ const Navbar = () => {
             <NavLink style={styleActiveLink} to="/contact-me">
               <Text color="white">Contact Me</Text>
             </NavLink>
-            <Button
-              mt="1rem"
-              colorScheme="primary"
-              h="2.5rem"
-              fontWeight="normal"
-              _active={{ bgColor: "secondary" }}
-              bgColor="primary"
-              color="white"
-              onClick={viewResume}
-            >
-              Resume
-            </Button>
           </Box>
+          <Button
+            mt="1rem"
+            colorScheme="primary"
+            h="2.5rem"
+            fontWeight="normal"
+            _active={{ bgColor: "secondary" }}
+            bgColor="primary"
+            color="white"
+            onClick={viewResume}
+          >
+            Resume
+          </Button>
           <Flex color="white">
             <SocialIcons whyte="whyte" />
           </Flex>
