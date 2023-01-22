@@ -190,7 +190,7 @@ const Home = () => {
         id="projects"
         zIndex={999}
         position="relative"
-        top={{ base: "75vh", md: "85vh" }}
+        top={{ base: "60vh", md: "85vh" }}
         h="80vh"
         bgColor="white"
         p="1rem"
