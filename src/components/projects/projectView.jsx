@@ -8,16 +8,17 @@ const ProjectView = () => {
   return (
     <>
       <Tabs colorScheme="primary">
-        <TabList w="100%" marginLeft={{ base: "0", md: "4rem" }}>
+        <TabList
+          marginLeft={{ base: "0", md: "4rem" }}
+          w={{ base: "100%", md: "90%" }}>
           {tabs.map((tab, i) => (
             <Tab
               _selected={{
                 fontWeight: "bold",
                 borderBottom: "2px solid #093450",
               }}
-              fontSize=".7rem"
-              key={i}
-            >
+              fontSize={{ base: ".7rem", md: "1rem" }}
+              key={i}>
               {tab}
             </Tab>
           ))}
@@ -30,8 +31,7 @@ const ProjectView = () => {
                 w="fit-content"
                 spacing={6}
                 justify="center"
-                marginInline="auto"
-              >
+                marginInline="auto">
                 {projects.map((project, i) => (
                   <WrapItem key={i}>
                     <Projectcard project={project} />

@@ -18,7 +18,7 @@ const Home = () => {
   }, []);
 
   const listenToScroll = () => {
-    let heightToHideFrom = 20;
+    let heightToHideFrom = 15;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -45,16 +45,14 @@ const Home = () => {
     <>
       <Box
         position={{ base: "fixed", md: "fixed" }}
-        zIndex="1"
+        zIndex={0}
         paddingInline={{ base: ".1rem", md: "auto" }}
-        width={{ base: "100vw", md: "100%" }}
-      >
+        width={{ base: "100vw", md: "100%" }}>
         <Box
           paddingTop={{ base: "4rem", md: "5rem" }}
           minH="80vh"
           width="90%"
-          marginInline="auto"
-        >
+          marginInline="auto">
           <Box display="flex" justifyContent="space-between">
             <Box marginTop="2rem" display={{ base: "none", md: "flex" }}>
               <SocialIcons heyt="25rem" direction="column" />
@@ -65,8 +63,7 @@ const Home = () => {
                 flexDir="column"
                 justifyContent="center"
                 textAlign="center"
-                width="fit-content"
-              >
+                width="fit-content">
                 <Box display="flex" justifyContent="center" marginBlock=".5rem">
                   <Image
                     w={{ base: "6rem", md: "8rem" }}
@@ -77,15 +74,13 @@ const Home = () => {
                 <Heading
                   fontSize={{ base: "3rem", md: "4rem" }}
                   fontWeight="600"
-                  color="blaq"
-                >
+                  color="blaq">
                   Hello.
                 </Heading>
                 <Text
                   color="blaq"
                   fontWeight="500"
-                  fontSize={{ base: "1rem", md: "2rem" }}
-                >
+                  fontSize={{ base: "1rem", md: "2rem" }}>
                   I’m Muhammad Junior Adamu
                 </Text>
                 <Text color="blaq" fontSize={{ base: ".8rem", md: "1.5rem" }}>
@@ -101,29 +96,25 @@ const Home = () => {
                   w={{ base: "70vw", md: "50vw" }}
                   display="flex"
                   marginInline="auto"
-                  width="fit-content"
-                >
+                  width="fit-content">
                   <Flex
                     width="fit-content"
                     columnGap="1rem"
-                    alignItems="center"
-                  >
+                    alignItems="center">
                     <AiFillStar color="#FCD53F" />
                     <Text>Product Designer</Text>
                   </Flex>
                   <Flex
                     width="fit-content"
                     columnGap="1rem"
-                    alignItems="center"
-                  >
+                    alignItems="center">
                     <AiFillStar color="#FCD53F" />
                     <Text>Brand Designer</Text>
                   </Flex>
                   <Flex
                     width="fit-content"
                     columnGap="1rem"
-                    alignItems="center"
-                  >
+                    alignItems="center">
                     <AiOutlineStar color="#FCD53F" />
                     <Text color="#969696">Front-end Developer (In View)</Text>
                   </Flex>
@@ -139,8 +130,7 @@ const Home = () => {
                       h="2.5rem"
                       fontWeight="normal"
                       border="2px solid #093450"
-                      fontSize={{ base: ".8rem", md: "1rem" }}
-                    >
+                      fontSize={{ base: ".8rem", md: "1rem" }}>
                       View My Resume
                     </Button>
                   </Box>
@@ -153,8 +143,7 @@ const Home = () => {
                       fontWeight="normal"
                       _active={{ bgColor: "secondary" }}
                       bgColor="primary"
-                      color="white"
-                    >
+                      color="white">
                       About Me
                     </Button>
                   </Box>
@@ -176,8 +165,7 @@ const Home = () => {
           color="primary"
           bgColor="#FCD53F"
           h="2rem"
-          marginTop="2rem"
-        >
+          marginTop="2rem">
           <marquee>
             \\Scroll Down to See Projects \\ Scroll Down to See Projects \\
             Scroll Down to See Projects \\ Scroll Down to See Projects \\ Scroll
@@ -188,13 +176,12 @@ const Home = () => {
       )}
       <Box
         id="projects"
-        zIndex="99"
+        zIndex="9999"
         position="relative"
         top={{ base: "70vh", md: "85vh" }}
-        h="80vh"
+        h="fit-content"
         bgColor="white"
-        p="1rem"
-      >
+        w={{ base: "100%", md: "100%" }}>
         <Box bgColor="white">
           <Box marginBottom="2rem" marginInline="auto" w="fit-content">
             <ProjectView />

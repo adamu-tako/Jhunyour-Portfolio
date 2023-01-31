@@ -24,8 +24,7 @@ function App() {
         bgSize="cover"
         bgRepeat="no-repeat"
         minH="30vh"
-        fontFamily="primary"
-      >
+        fontFamily="primary">
         <Box minH="calc(80vh - 100px)">
           <Box position="fixed" w="100vw" zIndex={100}>
             <Navbar />
