@@ -7,6 +7,7 @@ import projects from "../../assets/projects/projects";
 import prevIcon from "../../assets/prevIcon.png";
 import nextIcon from "../../assets/nextIcon.png";
 import { Spinner } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -31,6 +32,7 @@ const ProjectPage = () => {
     setLoading(true);
     if (projectId > 1) {
       setProjectId((prev) => prev - 1);
+      window.scrollTo(0, 0);
     } else {
       console.error("excepton");
     }
@@ -40,6 +42,7 @@ const ProjectPage = () => {
   const handleNavigationNext = () => {
     if (projectId < projects.length) {
       setProjectId((prev) => prev + 1);
+      window.scrollTo(0, 0);
     } else {
       return;
     }
@@ -81,7 +84,7 @@ const ProjectPage = () => {
                   <Image src={LinkIcon} />
                   <Text>Link to Figma prototype </Text>
                 </Flex>
-                <Box p="1rem">
+                <Box>
                   {project?.images.map((image, i) => (
                     <Image key={i} src={image} />
                   ))}
@@ -109,6 +112,10 @@ const ProjectPage = () => {
         justifyContent="space-between"
         alignItems="center">
         <Flex
+          as={motion.div}
+          whileHover={{
+            scale: 1.2,
+          }}
           columnGap="1rem"
           cursor="pointer"
           alignItems="center"
@@ -117,6 +124,10 @@ const ProjectPage = () => {
           <Text>Previous</Text>
         </Flex>
         <Flex
+          as={motion.div}
+          whileHover={{
+            scale: 1.2,
+          }}
           columnGap="1rem"
           cursor="pointer"
           alignItems="center"

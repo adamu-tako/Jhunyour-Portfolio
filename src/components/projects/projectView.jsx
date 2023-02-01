@@ -17,6 +17,7 @@ const ProjectView = () => {
                 fontWeight: "bold",
                 borderBottom: "2px solid #093450",
               }}
+              color="primary"
               fontSize={{ base: ".7rem", md: "1rem" }}
               key={i}>
               {tab}
@@ -29,6 +30,8 @@ const ProjectView = () => {
               <Wrap
                 bgColor="white"
                 w="fit-content"
+                h="fit-content"
+                p="3rem"
                 spacing={6}
                 justify="center"
                 marginInline="auto">

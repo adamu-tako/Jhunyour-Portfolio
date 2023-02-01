@@ -36,8 +36,7 @@ const Navbar = () => {
         alignItems="center"
         paddingInline={{ base: "1.5rem", md: "6rem" }}
         zIndex="99"
-        width="100vw"
-      >
+        width="100vw">
         <Box>
           <NavLink to="/">
             <Text fontWeight="600" color="primary" fontSize="1.5rem">
@@ -49,8 +48,7 @@ const Navbar = () => {
           display={{ base: "none", md: "flex" }}
           columnGap="2rem"
           height="100%"
-          alignItems="center"
-        >
+          alignItems="center">
           <Flex w="20rem" justifyContent="space-around">
             <NavLink style={styleActiveLink} to="/#projects">
               <Text color="primary">Project</Text>
@@ -71,15 +69,18 @@ const Navbar = () => {
               h="2.5rem"
               fontWeight="normal"
               onClick={viewResume}
-            >
+              _hover={{
+                bgColor: "transparent",
+                color: "black",
+                border: "2px solid #093450",
+              }}>
               Resume
             </Button>
           </Box>
         </Flex>
         <Box
           display={{ base: "flex", md: "none" }}
-          onClick={() => setNavToggle(true)}
-        >
+          onClick={() => setNavToggle(true)}>
           <GiHamburgerMenu />
         </Box>
       </Flex>
@@ -96,8 +97,7 @@ const Navbar = () => {
           top="0"
           bgColor="black"
           justifyContent="space-between"
-          onClick={() => setNavToggle(false)}
-        >
+          onClick={() => setNavToggle(false)}>
           <Box
             position="absolute"
             top="0.5rem"
@@ -105,8 +105,7 @@ const Navbar = () => {
             justifySelf="flex-end"
             color="red"
             fontSize="1.5rem"
-            onClick={() => setNavToggle(false)}
-          >
+            onClick={() => setNavToggle(false)}>
             <AiOutlineClose color="red" />
           </Box>
           <Box
@@ -116,8 +115,7 @@ const Navbar = () => {
             justifyContent="space-around"
             width="fit-content"
             mt="15rem"
-            h="20vh"
-          >
+            h="20vh">
             <NavLink border="2px solid green" style={styleActiveLink} to="/">
               <Text color="white">Project</Text>
             </NavLink>
@@ -136,8 +134,7 @@ const Navbar = () => {
             _active={{ bgColor: "secondary" }}
             bgColor="primary"
             color="white"
-            onClick={viewResume}
-          >
+            onClick={viewResume}>
             Resume
           </Button>
           <Flex color="white">

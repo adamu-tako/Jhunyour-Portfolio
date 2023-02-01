@@ -127,6 +127,10 @@ const Home = () => {
                       _active={{ bgColor: "primary" }}
                       bgColor="transparent"
                       color="primary"
+                      _hover={{
+                        bgColor: "primary",
+                        color: "white",
+                      }}
                       h="2.5rem"
                       fontWeight="normal"
                       border="2px solid #093450"
@@ -141,6 +145,11 @@ const Home = () => {
                       colorScheme="primary"
                       h="2.5rem"
                       fontWeight="normal"
+                      _hover={{
+                        bgColor: "transparent",
+                        color: "black",
+                        border: "2px solid #093450",
+                      }}
                       _active={{ bgColor: "secondary" }}
                       bgColor="primary"
                       color="white">
@@ -175,7 +184,6 @@ const Home = () => {
         </Box>
       )}
       <Box
-        id="projects"
         zIndex="9999"
         position="relative"
         top={{ base: "70vh", md: "100vh" }}
@@ -183,7 +191,11 @@ const Home = () => {
         bgColor="white"
         w={{ base: "100%", md: "100%" }}>
         <Box bgColor="white">
-          <Box marginBottom="2rem" marginInline="auto" w="fit-content">
+          <Box
+            id="projects"
+            marginBottom="2rem"
+            marginInline="auto"
+            w="fit-content">
             <ProjectView />
           </Box>
           <Footer />

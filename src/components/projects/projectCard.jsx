@@ -1,16 +1,22 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Flex, Text } from "@chakra-ui/layout";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Projectcard = ({ project }) => {
   return (
     <Link to={`/projects/${project.projectId}`}>
       <Box
+        as={motion.div}
         w={{ base: "15rem", md: "25rem" }}
         h={{ base: "18rem", md: "23rem" }}
-        boxShadow="lg"
-        fontSize=".6rem"
-      >
+        _hover={{
+          boxShadow: "lg",
+        }}
+        whileHover={{
+          scale: 1.1,
+        }}
+        fontSize=".6rem">
         <Image src={project.smallImage} />
         <Box ml="1rem" mt="0.5rem" rowGap={1}>
           <Text fontSize="1rem" paddingBottom=".4rem" fontWeight="500">
@@ -26,8 +32,7 @@ const Projectcard = ({ project }) => {
               w="fit-content"
               bgColor="#DCEEFF"
               color="#256DF8"
-              p=".8rem"
-            >
+              p=".8rem">
               {project.tag}
             </Box>
             <Box
@@ -39,8 +44,7 @@ const Projectcard = ({ project }) => {
               borderRadius="full"
               display="flex"
               justifyContent="center"
-              alignItems="center"
-            >
+              alignItems="center">
               {project.liveProjectLink ? "Live Project" : "Figma Prototype"}
             </Box>
           </Flex>

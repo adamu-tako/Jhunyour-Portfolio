@@ -1,3 +1,21 @@
+//  Pay Imports
+import paySm from "./pay/pay-sm.jpg";
+import payOne from "./pay/one.webp";
+import payTwo from "./pay/two.webp";
+import payThree from "./pay/three.webp";
+import payFour from "./pay/four.webp";
+import payFive from "./pay/five.webp";
+import paySix from "./pay/six.webp";
+import paySeven from "./pay/seven.webp";
+import payEight from "./pay/eight.webp";
+import payNine from "./pay/nine.webp";
+import payTen from "./pay/ten.jpg";
+import payEleven from "./pay/eleven.jpg";
+import payTwelve from "./pay/twelve.jpg";
+import payThirteen from "./pay/thirteen.jpg";
+import payFourteen from "./pay/fourteen.jpg";
+import payFifteen from "./pay/fifteen.webp";
+
 // Event Imports
 import eventSm from "./event/event-sm.jpg";
 import one from "./event/one.webp";
@@ -64,8 +82,37 @@ import planetFive from "./planet/five.jpg";
 
 const projects = [
   {
-    projectName: "E-vent",
+    projectName: "Paybolt",
     projectId: 1,
+    title: "Finance Mobile Application - Paybolt",
+    tag: "Case Study",
+    projectDescription:
+      "Secure minna is an Android/IOS app that contains emergency contacts and locations of emergency centres/officials in minna.",
+    PrototypeLink: "",
+    liveProjectLink: "hkjsldfjs sfi",
+    images: [
+      payOne,
+      payTwo,
+      payThree,
+      payThree,
+      payFour,
+      payFive,
+      paySix,
+      paySeven,
+      payEight,
+      payNine,
+      payTen,
+      payEleven,
+      payTwelve,
+      payThirteen,
+      payFourteen,
+      payFifteen,
+    ],
+    smallImage: paySm,
+  },
+  {
+    projectName: "E-vent",
+    projectId: 2,
     title: "Event Management Application - E-vent",
     tag: "Case Study",
     projectDescription:
@@ -93,7 +140,7 @@ const projects = [
 
   {
     projectName: "Likta",
-    projectId: 2,
+    projectId: 3,
     title: "Doctor Appointment App - Likta",
     tag: "Case Study",
     projectDescription:
@@ -115,7 +162,7 @@ const projects = [
 
   {
     projectName: "Timart",
-    projectId: 3,
+    projectId: 4,
     title: "Business Bookeeping App - Timart",
     tag: "Case Study",
     projectDescription:
@@ -140,7 +187,7 @@ const projects = [
 
   {
     projectName: "Timart Food",
-    projectId: 4,
+    projectId: 5,
     title: "Food Delivery Platform. Web & Mobile",
     tag: "Case Study",
     projectDescription:
@@ -168,7 +215,7 @@ const projects = [
 
   {
     projectName: "Discover Universe",
-    projectId: 5,
+    projectId: 6,
     title: "Educational Application. Discover Univ...",
     tag: "Case Study",
     projectDescription:
