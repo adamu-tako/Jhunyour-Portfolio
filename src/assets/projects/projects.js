@@ -15,16 +15,6 @@ import twelve from "./event/twelve.webp";
 import thirteen from "./event/thirteen.webp";
 import fourteen from "./event/fourteen.webp";
 
-//  LIkita Imports
-import liktaSm from "./likta/likita-sm.jpg";
-import liktaOne from "./likta/one.webp";
-import liktaTwo from "./likta/two.webp";
-import liktaThree from "./likta/three.webp";
-import liktaFour from "./likta/four.webp";
-import liktaFive from "./likta/five.webp";
-import liktaSix from "./likta/six.webp";
-import liktaSeven from "./likta/seven.webp";
-
 //  Biz App Imports
 import bizSm from "./bizApp/biz-sm.jpg";
 import bizOne from "./bizApp/one.webp";
@@ -61,6 +51,16 @@ import planetTwo from "./planet/two.webp";
 import planetThree from "./planet/three.webp";
 import planetFour from "./planet/four.webp";
 import planetFive from "./planet/five.jpg";
+
+//  LIkita Imports
+import liktaSm from "./likta/likita-sm.jpg";
+import liktaOne from "./likta/one.webp";
+import liktaTwo from "./likta/two.webp";
+import liktaThree from "./likta/three.webp";
+import liktaFour from "./likta/four.webp";
+import liktaFive from "./likta/five.webp";
+import liktaSix from "./likta/six.webp";
+import liktaSeven from "./likta/seven.webp";
 
 const projects = [
   {
