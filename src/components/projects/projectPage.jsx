@@ -46,29 +46,27 @@ const ProjectPage = () => {
   };
 
   return (
-    <Box bgColor="white" paddingBottom="2rem" w="100vw" minH="50vh">
+    <Box bgColor="white" paddingBottom="2rem" w="auto" minH="50vh">
       {project && (
         <>
           {loading ? (
             <Box
               pt="3rem"
               h="80vh"
-              w="100vw"
+              w="98vw"
               display="flex"
               alignItems="center"
-              justifyContent="center"
-            >
+              justifyContent="center">
               <Spinner />
             </Box>
           ) : (
             <>
-              <Box pt="3rem" marginInline="auto">
+              <Box pt="3rem">
                 <Box
                   w="60vw"
                   textAlign="center"
                   marginInline="auto"
-                  marginBlock="1rem"
-                >
+                  marginBlock="1rem">
                   <Heading>{project.projectName}</Heading>
                   <Text>{project.projectDescription}</Text>
                 </Box>
@@ -79,8 +77,7 @@ const ProjectPage = () => {
                   alignItems="center"
                   justifyContent="center"
                   w="20rem"
-                  bgColor="#D6EEFD"
-                >
+                  bgColor="#D6EEFD">
                   <Image src={LinkIcon} />
                   <Text>Link to Figma prototype </Text>
                 </Flex>
@@ -97,8 +94,7 @@ const ProjectPage = () => {
                 alignItems="center"
                 justifyContent="center"
                 w="20rem"
-                bgColor="#D6EEFD"
-              >
+                bgColor="#D6EEFD">
                 <Image src={LinkIcon} />
                 <Text>Link to Figma prototype </Text>
               </Flex>
@@ -111,14 +107,12 @@ const ProjectPage = () => {
         w="80%"
         marginInline="auto"
         justifyContent="space-between"
-        alignItems="center"
-      >
+        alignItems="center">
         <Flex
           columnGap="1rem"
           cursor="pointer"
           alignItems="center"
-          onClick={handleNavigationPrev}
-        >
+          onClick={handleNavigationPrev}>
           <Image src={prevIcon} />
           <Text>Previous</Text>
         </Flex>
@@ -126,8 +120,7 @@ const ProjectPage = () => {
           columnGap="1rem"
           cursor="pointer"
           alignItems="center"
-          onClick={handleNavigationNext}
-        >
+          onClick={handleNavigationNext}>
           <Text>Next</Text>
           <Image src={nextIcon} />
         </Flex>
