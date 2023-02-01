@@ -16,6 +16,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Jhunyour from "../../assets/jhunyour.webp";
 import { Resume } from "../../assets/resume";
@@ -23,6 +24,11 @@ import SocialIcons from "../socialIcons";
 
 const AboutMe = () => {
   const navigate = useNavigate();
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
+  const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+
   const contactMe = () => {
     navigate("/contact-me");
   };
@@ -40,6 +46,7 @@ const AboutMe = () => {
       },
     },
   };
+
   const ItemVariant = {
     hidden: {
       x: "40vw",
@@ -69,34 +76,29 @@ const AboutMe = () => {
     <Box
       paddingInline={{ base: "1rem", md: "6rem" }}
       mt="1.5rem"
-      bgColor="white"
-    >
+      bgColor="white">
       <Box
         paddingBlock={{ base: "1rem", md: "2.5rem" }}
         display={{ base: "column", md: "flex" }}
         columnGap="2rem"
-        justifyContent="space-between"
-      >
+        justifyContent="space-between">
         <Box
           as={motion.div}
           variants={boxVariant}
           initial="hidden"
           animate="visible"
           marginBottom="2rem"
-          width={{ base: "80vw", md: "40vw" }}
-        >
+          width={{ base: "80vw", md: "40vw" }}>
           <Heading
             marginBlock="1rem"
             textDecoration="underline"
-            fontSize={{ base: "1rem", md: "1.25rem" }}
-          >
+            fontSize={{ base: "1rem", md: "1.25rem" }}>
             Meet Muhammad Junior Adamu
           </Heading>
           <Box
             fontSize={{ base: ".8rem", md: "1rem" }}
             width={{ base: "100%", md: "90%" }}
-            lineHeight="2rem"
-          >
+            lineHeight="2rem">
             <Text as={motion.p} variants={listVariant}>
               Hello, I am a passionate product and brand designer with four
               years of experience in design. I have contributed to the growth of
@@ -124,29 +126,49 @@ const AboutMe = () => {
               h="2.5rem"
               fontWeight="normal"
               color="white"
-              onClick={contactMe}
-            >
+              onClick={contactMe}>
               Contact Me
             </Button>
           </Box>
         </Box>
-        <Box>
+        <Box variants={boxVariant}>
           <Box marginBottom="1rem">
             <SocialIcons />
           </Box>
-          <Image
-            as={motion.img}
-            animate={{
-              // scale: [0.8, 0.9, 1, 1.1, 1],
-              borderRadius: ["20%", "20%", "50%", "50%", "0%"],
-              rotate: [0, 0, 270, 270, 0],
-            }}
+          <Box
+            as={motion.div}
+            initial={false}
+            animate={
+              isLoaded && isInView
+                ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
+                : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+            }
             transition={{
               duration: 2,
+              delay: 0.5,
+            }}
+            onViewportEnter={() => setIsInView(true)}
+            viewport={{ once: true }}>
+            <Image
+              src={Jhunyour}
+              onLoad={() => setIsLoaded(true)}
+              alt="Muhammad Jhunyour's Photo"
+            />
+          </Box>
+          {/* <Image
+            as={motion.img}
+            initial={{ y: "-80%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              type: "tween",
+              ease: "easeOut",
+              duration: 5,
+              staggerChildren: 1,
             }}
             src={Jhunyour}
+            onLoad={() => setIsLoaded(true)}
             alt="Muhammad Jhunyour's Photo"
-          />
+          /> */}
         </Box>
       </Box>
       <Box paddingBottom="2rem">
@@ -169,27 +191,23 @@ const AboutMe = () => {
                       as={motion.div}
                       variants={ItemVariant}
                       initial="hidden"
-                      whileInView="visible"
-                    >
+                      whileInView="visible">
                       <Text
                         as={motion.p}
                         variants={listVariant}
-                        fontWeight="600"
-                      >
+                        fontWeight="600">
                         {tab.title}
                       </Text>
                       <Text
                         as={motion.p}
                         variants={listVariant}
-                        fontWeight="500"
-                      >
+                        fontWeight="500">
                         {tab.subtitle}
                       </Text>
                       <Text
                         as={motion.p}
                         variants={listVariant}
-                        fontWeight="400"
-                      >
+                        fontWeight="400">
                         {tab.location}
                       </Text>
                     </Box>
@@ -202,8 +220,7 @@ const AboutMe = () => {
         <Box
           marginTop="2rem"
           width="100%"
-          display={{ base: "flex", md: "none" }}
-        >
+          display={{ base: "flex", md: "none" }}>
           <Accordion minWidth="90vw">
             {Resume.map((tab, i) => (
               <AccordionItem key={i}>
@@ -221,8 +238,7 @@ const AboutMe = () => {
                       key={i}
                       my="1rem"
                       paddingInline="1rem"
-                      borderLeft="4px solid #093450"
-                    >
+                      borderLeft="4px solid #093450">
                       <Text fontWeight="600">{tab.title}</Text>
                       <Text fontWeight="500">{tab.subtitle}</Text>
                       <Text fontWeight="400">{tab.location}</Text>
