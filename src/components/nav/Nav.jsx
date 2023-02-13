@@ -22,9 +22,10 @@ const Navbar = () => {
     return isActive ? activeClassName : notActiveClass;
   };
 
-  const viewResume = () => {
-    document.location = "https://www.google.com";
-  };
+  // const viewResume = () => {
+  //   document.location =
+  //     "https://drive.google.com/file/d/1Pniow5sTRF7G-T8nkSylORoDUDj1HyNk/view?usp=share_link";
+  // };
 
   return (
     <>
@@ -61,21 +62,25 @@ const Navbar = () => {
             </NavLink>
           </Flex>
           <Box>
-            <Button
-              colorScheme="primary"
-              _active={{ bgColor: "secondary" }}
-              bgColor="primary"
-              color="white"
-              h="2.5rem"
-              fontWeight="normal"
-              onClick={viewResume}
-              _hover={{
-                bgColor: "transparent",
-                color: "black",
-                border: "2px solid #093450",
-              }}>
-              Resume
-            </Button>
+            <a
+              target="_blank"
+              href="https://drive.google.com/file/d/1Pniow5sTRF7G-T8nkSylORoDUDj1HyNk/view?usp=share_link">
+              <Button
+                colorScheme="primary"
+                _active={{ bgColor: "secondary" }}
+                bgColor="primary"
+                color="white"
+                h="2.5rem"
+                fontWeight="normal"
+                // onClick={viewResume}
+                _hover={{
+                  bgColor: "transparent",
+                  color: "black",
+                  border: "2px solid #093450",
+                }}>
+                Resume
+              </Button>
+            </a>
           </Box>
         </Flex>
         <Box

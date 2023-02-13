@@ -74,6 +74,7 @@ const ProjectPage = () => {
                   <Text>{project.projectDescription}</Text>
                 </Box>
                 <Flex
+                  marginBlock="2rem"
                   marginInline="auto"
                   borderRadius="full"
                   p=".3rem"

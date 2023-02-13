@@ -80,6 +80,42 @@ import planetThree from "./planet/three.webp";
 import planetFour from "./planet/four.webp";
 import planetFive from "./planet/five.jpg";
 
+//  Fay Imports
+import faySm from "./fay/fay-sm.png";
+import fayOne from "./fay/one.jpg";
+import fayTwo from "./fay/two.jpg";
+import fayThree from "./fay/three.jpg";
+import fayFour from "./fay/four.jpg";
+import fayFive from "./fay/five.jpg";
+import faySix from "./fay/six.jpg";
+
+//  Soft Imports
+import softSm from "./soft/soft-sm.png";
+import softOne from "./soft/one.jpg";
+import softTwo from "./soft/two.jpg";
+import softThree from "./soft/three.jpg";
+import softFour from "./soft/four.jpg";
+import softFive from "./soft/five.jpg";
+import softSix from "./soft/six.jpg";
+
+// Event Imports
+import comSm from "./commerce/commerce-sm.png";
+import comOne from "./commerce/one.jpg";
+import comTwo from "./commerce/two.jpg";
+import comThree from "./commerce/three.jpg";
+import comFour from "./commerce/four.jpg";
+import comFive from "./commerce/five.jpg";
+import comSix from "./commerce/six.jpg";
+import comSeven from "./commerce/seven.jpg";
+import comEight from "./commerce/eight.jpg";
+import comNine from "./commerce/nine.jpg";
+import comTen from "./commerce/ten.jpg";
+import comEleven from "./commerce/eleven.jpg";
+import comTwelve from "./commerce/twelve.jpg";
+import comThirteen from "./commerce/thirteen.jpg";
+import comFourteen from "./commerce/fourteen.jpg";
+
+
 const projects = [
   {
     projectName: "Paybolt",
@@ -231,6 +267,70 @@ const projects = [
       planetFive,
     ],
     smallImage: planetSm,
+  },
+  {
+    projectName: "Fay Fashion",
+    projectId: 7,
+    branding: {
+      Client: "Mahmud Abubakar",
+      Timeline: "2weeks",
+      Roles: "Brand Designer",
+      Year: "2022",
+    },
+    title: "Logo Design - Fay Fashion",
+    tag: "Logo Design",
+    projectDescription:
+      "Fay Fashion is a fashion brand with a unique branding identity for consumers of bespoke and other fashion statements.",
+    PrototypeLink: "",
+    liveProjectLink: "hkjsldfjs sfi",
+    images: [fayOne, fayTwo, fayFour, fayThree, fayFive, faySix],
+    smallImage: faySm,
+  },
+  {
+    projectName: "Soft Sole",
+    projectId: 8,
+    branding: {
+      Client: "Yusuf Madaki",
+      Timeline: "2weeks",
+      Roles: "Brand Designer",
+      Year: "2021",
+    },
+    title: "Logo Design - Soft Sole",
+    tag: "Logo Design",
+    projectDescription:
+      "Soft Sole is a premium shoe maker brand that offers unique, stylish and comfortable footwear made from the finest materials with traditional craftsmanship and contemporary design.",
+    PrototypeLink: "",
+    liveProjectLink: "hkjsldfjs sfi",
+    images: [softOne, softTwo, softFour, softThree, softFive, softSix],
+    smallImage: softSm,
+  },
+  {
+    projectName: "Timart",
+    projectId: 9,
+    title: "E-Commerce Website - Timart",
+    tag: "UI/UX Task",
+    projectDescription:
+      "Secure minna is an Android/IOS app that contains emergency contacts and locations of emergency centres/officials in minna.",
+    PrototypeLink: "",
+    liveProjectLink: "hkjsldfjs sfi",
+    images: [
+      comOne,
+      comTwo,
+      comThree,
+      comThree,
+      comFour,
+      comFive,
+      comSix,
+      comSeven,
+      comEight,
+      comNine,
+      comTen,
+      comEleven,
+      comTwelve,
+      comThirteen,
+      comFourteen,
+    ],
+    smallImage: comSm,
   },
 ];
 

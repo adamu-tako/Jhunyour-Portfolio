@@ -9,7 +9,9 @@ import Footer from "./components/footer";
 import Home from "./components/landingPage";
 import Bg from "./assets/background.webp";
 import ProjectPage from "./components/projects/projectPage";
+import BrandingProject from "./components/projects/brandingProject";
 import Test from "./components/test";
+import UxTaskProject from "./components/projects/uxTaskProject";
 
 function App() {
   const { pathname } = useLocation();
@@ -34,7 +36,18 @@ function App() {
               <Route path="/about-me" element={<AboutMe />} />
               <Route path="/contact-me" element={<ContactMe />} />
               <Route path="/test" element={<Test />} />
-              <Route path="/projects/:id" element={<ProjectPage />} />
+              <Route
+                path="/projects/case-studies/:id"
+                element={<ProjectPage />}
+              />
+              <Route
+                path="/projects/branding/:id"
+                element={<BrandingProject />}
+              />
+              <Route
+                path="/projects/ui-ux-task/:id"
+                element={<UxTaskProject />}
+              />
             </Routes>
           </Box>
         </Box>

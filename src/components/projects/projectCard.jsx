@@ -5,7 +5,14 @@ import { Link } from "react-router-dom";
 
 const Projectcard = ({ project }) => {
   return (
-    <Link to={`/projects/${project.projectId}`}>
+    <Link
+      to={
+        project.branding
+          ? `/projects/branding/${project.projectId}`
+          : project.tag === "UI/UX Task"
+          ? `/projects/ui-ux-task/${project.projectId}`
+          : `/projects/case-studies/${project.projectId}`
+      }>
       <Box
         as={motion.div}
         w={{ base: "15rem", md: "25rem" }}

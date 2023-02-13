@@ -4,7 +4,7 @@ import Jay from "../assets/jay.svg";
 import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ProjectView from "./projects/projectView";
 import Footer from "./footer";
 
@@ -121,40 +121,46 @@ const Home = () => {
                 </Flex>
                 <Flex justifyContent="center" columnGap="3rem">
                   <Box>
-                    <Button
-                      width={{ base: "8rem", md: "15rem" }}
-                      colorScheme="primary"
-                      _active={{ bgColor: "primary" }}
-                      bgColor="transparent"
-                      color="primary"
-                      _hover={{
-                        bgColor: "primary",
-                        color: "white",
-                      }}
-                      h="2.5rem"
-                      fontWeight="normal"
-                      border="2px solid #093450"
-                      fontSize={{ base: ".8rem", md: "1rem" }}>
-                      View My Resume
-                    </Button>
+                    <a
+                      target="_blank"
+                      href="https://drive.google.com/file/d/1Pniow5sTRF7G-T8nkSylORoDUDj1HyNk/view?usp=share_link">
+                      <Button
+                        width={{ base: "8rem", md: "15rem" }}
+                        colorScheme="primary"
+                        _active={{ bgColor: "primary" }}
+                        bgColor="transparent"
+                        color="primary"
+                        _hover={{
+                          bgColor: "primary",
+                          color: "white",
+                        }}
+                        h="2.5rem"
+                        fontWeight="normal"
+                        border="2px solid #093450"
+                        fontSize={{ base: ".8rem", md: "1rem" }}>
+                        View My Resume
+                      </Button>
+                    </a>
                   </Box>
                   <Box>
-                    <Button
-                      fontSize={{ base: ".8rem", md: "1rem" }}
-                      width={{ base: "8rem", md: "15rem" }}
-                      colorScheme="primary"
-                      h="2.5rem"
-                      fontWeight="normal"
-                      _hover={{
-                        bgColor: "transparent",
-                        color: "black",
-                        border: "2px solid #093450",
-                      }}
-                      _active={{ bgColor: "secondary" }}
-                      bgColor="primary"
-                      color="white">
-                      About Me
-                    </Button>
+                    <Link to="/about-me">
+                      <Button
+                        fontSize={{ base: ".8rem", md: "1rem" }}
+                        width={{ base: "8rem", md: "15rem" }}
+                        colorScheme="primary"
+                        h="2.5rem"
+                        fontWeight="normal"
+                        _hover={{
+                          bgColor: "transparent",
+                          color: "black",
+                          border: "2px solid #093450",
+                        }}
+                        _active={{ bgColor: "secondary" }}
+                        bgColor="primary"
+                        color="white">
+                        About Me
+                      </Button>
+                    </Link>
                   </Box>
                 </Flex>
               </Box>
