@@ -80,7 +80,6 @@ const Navbar = () => {
                 color="white"
                 h="2.5rem"
                 fontWeight="normal"
-                // onClick={viewResume}
                 _hover={{
                   bgColor: "transparent",
                   color: "black",
@@ -146,8 +145,7 @@ const Navbar = () => {
             fontWeight="normal"
             _active={{ bgColor: "secondary" }}
             bgColor="primary"
-            color="white"
-            onClick={viewResume}>
+            color="white">
             Resume
           </Button>
           <Flex color="white">

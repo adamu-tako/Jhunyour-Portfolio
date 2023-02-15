@@ -7,6 +7,7 @@ import {
   Input,
   Text,
   Textarea,
+  useToast,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -19,6 +20,7 @@ const ContactMe = () => {
   });
 
   const formRef = useRef(null);
+  const toast = useToast();
 
   const handleInput = (key, value) => {
     setMessageForm((prevInput) => {
@@ -28,9 +30,6 @@ const ContactMe = () => {
   };
 
   const sendMessage = () => {
-    console.log("send message");
-    console.log(messageForm);
-
     emailjs
       .sendForm(
         "service_51ss8o8",
@@ -40,10 +39,25 @@ const ContactMe = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          toast({
+            position: "top",
+            title: "Message sent",
+            status: "success",
+            isClosable: true,
+          });
+          setMessageForm({
+            name: "",
+            email: "",
+            message: "",
+          });
         },
         (error) => {
-          console.log(error.text);
+          toast({
+            position: "top",
+            title: { error },
+            status: "error",
+            isClosable: true,
+          });
         }
       );
   };
@@ -123,7 +137,7 @@ const ContactMe = () => {
                 h="2.5rem"
                 fontWeight="normal"
                 onClick={sendMessage}>
-                Resume
+                Send Message
               </Button>
             </Box>
           </FormControl>

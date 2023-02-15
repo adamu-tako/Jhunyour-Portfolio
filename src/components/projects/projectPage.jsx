@@ -106,7 +106,7 @@ const ProjectPage = () => {
           )}
         </>
       )}
-      <Flex
+      {/* <Flex
         marginBlock="3rem"
         w="80%"
         marginInline="auto"
@@ -136,7 +136,7 @@ const ProjectPage = () => {
           <Text>Next</Text>
           <Image src={nextIcon} />
         </Flex>
-      </Flex>
+      </Flex> */}
     </Box>
   );
 };
