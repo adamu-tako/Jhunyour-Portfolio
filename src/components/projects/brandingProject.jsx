@@ -77,25 +77,25 @@ const BrandingProject = () => {
                 </Box>
                 {project.branding ? (
                   <Box paddingInline="6rem">
-                    <Flex marginBlock="1rem" columnGap="2rem">
-                      <Text fontSize="2xl"> CLient:</Text>
+                    <Flex marginBlock="1rem" columnGap=".5rem">
+                      <Text fontSize="2xl"> Client:</Text>
                       <Text fontSize="2xl" fontWeight="500">
                         {project.branding.Client}
                       </Text>
                     </Flex>
-                    <Flex marginBlock="1rem" columnGap="2rem">
+                    <Flex marginBlock="1rem" columnGap=".5rem">
                       <Text fontSize="2xl"> Timeline:</Text>
                       <Text fontSize="2xl" fontWeight="500">
                         {project.branding.Timeline}
                       </Text>
                     </Flex>
-                    <Flex marginBlock="1rem" columnGap="2rem">
+                    <Flex marginBlock="1rem" columnGap=".5rem">
                       <Text fontSize="2xl"> Roles:</Text>
                       <Text fontSize="2xl" fontWeight="500">
                         {project.branding.Roles}
                       </Text>
                     </Flex>
-                    <Flex marginBlock="1rem" columnGap="2rem">
+                    <Flex marginBlock="1rem" columnGap=".5rem">
                       <Text fontSize="2xl"> Year:</Text>
                       <Text fontSize="2xl" fontWeight="500">
                         {project.branding.Year}

@@ -1,5 +1,14 @@
 import { Image } from "@chakra-ui/image";
-import { Box, Flex, Heading, Text, Wrap, WrapItem } from "@chakra-ui/layout";
+import {
+  Box,
+  Flex,
+  Heading,
+  ListItem,
+  Text,
+  UnorderedList,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/layout";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import projects from "../../assets/projects/projects";
@@ -25,98 +34,80 @@ const UxTaskProject = () => {
   }, [projectId]);
 
   return (
-    <Box bgColor="white" paddingBottom="2rem" w="auto" minH="50vh">
-      {project && (
-        <>
-          {loading ? (
-            <Box
-              pt="3rem"
-              h="80vh"
-              w="98vw"
-              display="flex"
-              alignItems="center"
-              justifyContent="center">
-              <Spinner />
+    <Box
+      bgColor="white"
+      paddingBottom="2rem"
+      w="auto"
+      minH="50vh"
+      paddingInline={{ base: "1rem", md: "6rem" }}>
+      <Box pt="3rem">
+        {/* <Box w="60vw" textAlign="center" marginInline="auto" marginBlock="1rem">
+          <Heading>{project?.projectName}</Heading>
+          <Text marginBlock="1rem" fontSize="xl" fontWeight="400">
+            {project?.projectDescription}
+          </Text>
+        </Box> */}
+        <Image src={project?.images[0]} />
+      </Box>
+      <Box marginBlock="1rem">
+        {project?.description.map((desc) => (
+          <>
+            <Text marginBlock=".5rem" fontSize="2xl" fontWeight="500">
+              {desc.heading}
+            </Text>
+            <Text>{desc.text}</Text>
+            <UnorderedList>
+              {desc.list
+                ? desc.list.map((list) => (
+                    <>
+                      <ListItem>{list}</ListItem>
+                    </>
+                  ))
+                : null}
+            </UnorderedList>
+          </>
+        ))}
+      </Box>
+      <Box>
+        {project?.sections.map((section) => (
+          <>
+            <Text
+              marginTop="2rem"
+              marginBottom=".5rem"
+              fontSize="2xl"
+              fontWeight="600">
+              {section.heading}
+            </Text>
+            {section.text ? (
+              <Text marginBlock=".3rem">{section.text}</Text>
+            ) : null}
+            {section.images.map((image) => (
+              <Image src={image} marginBlock="1rem" />
+            ))}
+          </>
+        ))}
+      </Box>
+      <Box>
+        <Box marginBlock="2rem">
+          {project?.footer.map((foot) => (
+            <Box marginBlock="1.5rem">
+              <Text marginBottom=".4rem" fontSize="2xl" fontWeight="500">
+                {foot.heading}
+              </Text>
+              <Text>{foot.text}</Text>
+              <UnorderedList>
+                {foot.list
+                  ? foot.list.map((list) => (
+                      <>
+                        <ListItem>{list}</ListItem>
+                      </>
+                    ))
+                  : null}
+              </UnorderedList>
             </Box>
-          ) : (
-            <>
-              <Box pt="3rem">
-                <Box
-                  w="60vw"
-                  textAlign="center"
-                  marginInline="auto"
-                  marginBlock="1rem">
-                  <Heading>{project.projectName}</Heading>
-                  <Text marginBlock="1rem" fontSize="xl" fontWeight="400">
-                    {project.projectDescription}
-                  </Text>
-                </Box>
-                {project.tag === "UI?UX Task" ? (
-                  <Box paddingInline="6rem">
-                    <Image src={project?.images[0]} />
-                    <Flex marginBlock="1rem" columnGap="2rem">
-                      <Text fontSize="2xl"> CLient:</Text>
-                      <Text fontSize="2xl" fontWeight="500">
-                        {project.branding.Client}
-                      </Text>
-                    </Flex>
-                    <Flex marginBlock="1rem" columnGap="2rem">
-                      <Text fontSize="2xl"> Timeline:</Text>
-                      <Text fontSize="2xl" fontWeight="500">
-                        {project.branding.Timeline}
-                      </Text>
-                    </Flex>
-                    <Flex marginBlock="1rem" columnGap="2rem">
-                      <Text fontSize="2xl"> Roles:</Text>
-                      <Text fontSize="2xl" fontWeight="500">
-                        {project.branding.Roles}
-                      </Text>
-                    </Flex>
-                    <Flex marginBlock="1rem" columnGap="2rem">
-                      <Text fontSize="2xl"> Year:</Text>
-                      <Text fontSize="2xl" fontWeight="500">
-                        {project.branding.Year}
-                      </Text>
-                    </Flex>
-                  </Box>
-                ) : null}
-                <Box paddingInline="6rem">
-                  <Image src={project?.images[0]} />
-                  <Text
-                    fontSize="2xl"
-                    fontWeight="500"
-                    marginTop="2rem"
-                    marginBottom="1rem">
-                    Design Process & Styles
-                  </Text>
-                  <Image src={project?.images[1]} />
-                  <Text
-                    fontSize="2xl"
-                    fontWeight="500"
-                    marginTop="2rem"
-                    marginBottom="1rem">
-                    Snapshots
-                  </Text>
-                  <Wrap>
-                    <WrapItem>
-                      <Image src={project?.images[2]} />
-                    </WrapItem>
-                    <WrapItem>
-                      <Image src={project?.images[3]} />
-                    </WrapItem>
-                    <WrapItem>
-                      <Image src={project?.images[4]} />
-                    </WrapItem>
-                    <WrapItem>
-                      <Image src={project?.images[5]} />
-                    </WrapItem>
-                  </Wrap>
-                </Box>
-              </Box>
-            </>
-          )}
-        </>
-      )}
+          ))}
+        </Box>
+      </Box>
     </Box>
   );
 };

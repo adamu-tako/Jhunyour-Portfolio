@@ -6,8 +6,13 @@ import {
   AccordionPanel,
   Box,
   Button,
+  Flex,
+  Grid,
+  GridItem,
   Heading,
   Image,
+  Link,
+  SimpleGrid,
   Tab,
   TabList,
   TabPanel,
@@ -182,36 +187,51 @@ const AboutMe = () => {
             <TabPanels>
               {Resume.map((tab, index) => (
                 <TabPanel key={index} p={5}>
-                  {tab.content.map((tab, i) => (
-                    <Box
-                      key={i}
-                      my="1rem"
-                      paddingInline="1rem"
-                      borderLeft="4px solid #093450"
-                      as={motion.div}
-                      variants={ItemVariant}
-                      initial="hidden"
-                      whileInView="visible">
-                      <Text
-                        as={motion.p}
-                        variants={listVariant}
-                        fontWeight="600">
-                        {tab.title}
-                      </Text>
-                      <Text
-                        as={motion.p}
-                        variants={listVariant}
-                        fontWeight="500">
-                        {tab.subtitle}
-                      </Text>
-                      <Text
-                        as={motion.p}
-                        variants={listVariant}
-                        fontWeight="400">
-                        {tab.location}
-                      </Text>
-                    </Box>
-                  ))}
+                  <SimpleGrid columns={tab.tab === "Tools" ? "3" : null}>
+                    {tab.content.map((tab, i) => (
+                      <Box
+                        key={i}
+                        my="1rem"
+                        paddingInline="1rem"
+                        borderLeft="4px solid #093450"
+                        as={motion.div}
+                        variants={ItemVariant}
+                        initial="hidden"
+                        whileInView="visible">
+                        <Text
+                          as={motion.p}
+                          variants={listVariant}
+                          fontWeight="600">
+                          {tab.title}
+                        </Text>
+                        <Flex columnGap=".5rem">
+                          <Text
+                            as={motion.p}
+                            variants={listVariant}
+                            fontWeight="500">
+                            {tab.subtitle}
+                          </Text>
+                          {tab.link ? (
+                            <Link
+                              as={motion.p}
+                              variants={listVariant}
+                              href={tab.link}
+                              isExternal
+                              color="#256df8"
+                              textDecoration="underline">
+                              Link to Verify
+                            </Link>
+                          ) : null}
+                        </Flex>
+                        <Text
+                          as={motion.p}
+                          variants={listVariant}
+                          fontWeight="400">
+                          {tab.location}
+                        </Text>
+                      </Box>
+                    ))}
+                  </SimpleGrid>
                 </TabPanel>
               ))}
             </TabPanels>

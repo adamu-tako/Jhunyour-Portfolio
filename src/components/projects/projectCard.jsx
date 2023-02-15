@@ -42,18 +42,20 @@ const Projectcard = ({ project }) => {
               p=".8rem">
               {project.tag}
             </Box>
-            <Box
-              h=".8rem"
-              w="fit-content"
-              p=".8rem"
-              bgColor={project.liveProjectLink ? "#ECFFE8" : "#FFEEFE"}
-              color={project.liveProjectLink ? "#2DC806" : "#F851DD"}
-              borderRadius="full"
-              display="flex"
-              justifyContent="center"
-              alignItems="center">
-              {project.liveProjectLink ? "Live Project" : "Figma Prototype"}
-            </Box>
+            {project.liveProjectLink || project.PrototypeLink ? (
+              <Box
+                h=".8rem"
+                w="fit-content"
+                p=".8rem"
+                bgColor={project.liveProjectLink ? "#ECFFE8" : "#FFEEFE"}
+                color={project.liveProjectLink ? "#2DC806" : "#F851DD"}
+                borderRadius="full"
+                display="flex"
+                justifyContent="center"
+                alignItems="center">
+                {project.liveProjectLink ? "Live Project" : "Figma Prototype"}
+              </Box>
+            ) : null}
           </Flex>
         </Box>
       </Box>

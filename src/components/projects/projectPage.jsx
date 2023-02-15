@@ -65,15 +65,15 @@ const ProjectPage = () => {
           ) : (
             <>
               <Box pt="3rem">
-                <Box
+                {/* <Box
                   w="60vw"
                   textAlign="center"
                   marginInline="auto"
                   marginBlock="1rem">
                   <Heading>{project.projectName}</Heading>
                   <Text>{project.projectDescription}</Text>
-                </Box>
-                <Flex
+                </Box> */}
+                {/* <Flex
                   marginBlock="2rem"
                   marginInline="auto"
                   borderRadius="full"
@@ -84,14 +84,14 @@ const ProjectPage = () => {
                   bgColor="#D6EEFD">
                   <Image src={LinkIcon} />
                   <Text>Link to Figma prototype </Text>
-                </Flex>
+                </Flex> */}
                 <Box>
                   {project?.images.map((image, i) => (
                     <Image key={i} src={image} />
                   ))}
                 </Box>
               </Box>
-              <Flex
+              {/* <Flex
                 marginInline="auto"
                 borderRadius="full"
                 p=".3rem"
@@ -101,7 +101,7 @@ const ProjectPage = () => {
                 bgColor="#D6EEFD">
                 <Image src={LinkIcon} />
                 <Text>Link to Figma prototype </Text>
-              </Flex>
+              </Flex> */}
             </>
           )}
         </>

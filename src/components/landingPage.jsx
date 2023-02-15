@@ -72,15 +72,15 @@ const Home = () => {
                   />
                 </Box>
                 <Heading
-                  fontSize={{ base: "3rem", md: "4rem" }}
+                  fontSize={{ base: "1rem", md: "2rem" }}
                   fontWeight="600"
-                  color="blaq">
+                  color="#7d7d7d">
                   Hello.
                 </Heading>
                 <Text
                   color="blaq"
                   fontWeight="500"
-                  fontSize={{ base: "1rem", md: "2rem" }}>
+                  fontSize={{ base: "2rem", md: "3rem" }}>
                   I’m Muhammad Junior Adamu
                 </Text>
                 <Text color="blaq" fontSize={{ base: ".8rem", md: "1.5rem" }}>
@@ -119,7 +119,7 @@ const Home = () => {
                     <Text color="#969696">Front-end Developer (In View)</Text>
                   </Flex>
                 </Flex>
-                <Flex justifyContent="center" columnGap="3rem">
+                <Flex justifyContent="center" columnGap="3rem" marginTop="1rem">
                   <Box>
                     <a
                       target="_blank"
