@@ -25,6 +25,7 @@ export const Resume = [
       {
         title: "Google UX Certificate",
         subtitle: "Coursera | ",
+        link: "https://www.coursera.org/account/accomplishments/professional-cert/H69WVW7GTEUP?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof",
         location: "Jul. 2022 - Sep. 2022",
       },
       {
@@ -39,48 +40,48 @@ export const Resume = [
       },
     ],
   },
+  // {
+  //   tab: "Certificates ",
+  //   content: [
+  //     {
+  //       title: "Google UX Certificate",
+  //       subtitle: "Coursera | ",
+  //       location: "Jul. 2022 - Sep. 2022",
+  //     },
+  //     {
+  //       title: "Product Design (UI/UX)",
+  //       subtitle: "Side Hustle Internship | ",
+  //       location: "Aug. 2022 - Aug. 2022",
+  //     },
+  //     {
+  //       title: "Bachelor’s Degree - B.Tech, Transport Management Technology",
+  //       subtitle: "Federal University of Technology Minna",
+  //       location: "Dec. 2014 - Dec. 2019",
+  //     },
+  //   ],
+  // },
+  // {
+  //   tab: "Skills ",
+  //   content: [
+  //     {
+  //       title: "Google UX Certificate",
+  //       subtitle: "Coursera | ",
+  //       location: "Jul. 2022 - Sep. 2022",
+  //     },
+  //     {
+  //       title: "Product Design (UI/UX)",
+  //       subtitle: "Side Hustle Internship | ",
+  //       location: "Aug. 2022 - Aug. 2022",
+  //     },
+  //     {
+  //       title: "Bachelor’s Degree - B.Tech, Transport Management Technology",
+  //       subtitle: "Federal University of Technology Minna",
+  //       location: "Dec. 2014 - Dec. 2019",
+  //     },
+  //   ],
+  // },
   {
-    tab: "Certificates ",
-    content: [
-      {
-        title: "Google UX Certificate",
-        subtitle: "Coursera | ",
-        location: "Jul. 2022 - Sep. 2022",
-      },
-      {
-        title: "Product Design (UI/UX)",
-        subtitle: "Side Hustle Internship | ",
-        location: "Aug. 2022 - Aug. 2022",
-      },
-      {
-        title: "Bachelor’s Degree - B.Tech, Transport Management Technology",
-        subtitle: "Federal University of Technology Minna",
-        location: "Dec. 2014 - Dec. 2019",
-      },
-    ],
-  },
-  {
-    tab: "Skills ",
-    content: [
-      {
-        title: "Google UX Certificate",
-        subtitle: "Coursera | ",
-        location: "Jul. 2022 - Sep. 2022",
-      },
-      {
-        title: "Product Design (UI/UX)",
-        subtitle: "Side Hustle Internship | ",
-        location: "Aug. 2022 - Aug. 2022",
-      },
-      {
-        title: "Bachelor’s Degree - B.Tech, Transport Management Technology",
-        subtitle: "Federal University of Technology Minna",
-        location: "Dec. 2014 - Dec. 2019",
-      },
-    ],
-  },
-  {
-    tab: "Tools ",
+    tab: "Tools",
     content: [
       {
         title: "Figma",
@@ -88,7 +89,7 @@ export const Resume = [
         location: "",
       },
       {
-        title: "Adobe XD",
+        title: "Adobe Creative Suites",
         subtitle: "",
         location: "",
       },
@@ -96,6 +97,20 @@ export const Resume = [
         title: "Photoshop",
         subtitle: "",
         location: "",
+      },
+      {
+        title: "Microsoft Office Suite",
+        subtitle: "",
+        location: "",
+      },
+      {
+        title: "Slack",
+      },
+      {
+        title: "Trello",
+      },
+      {
+        title: "HTML and CSS",
       },
     ],
   },

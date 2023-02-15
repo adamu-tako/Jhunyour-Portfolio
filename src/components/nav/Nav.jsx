@@ -7,6 +7,7 @@ import SocialIcons from "../socialIcons";
 
 const Navbar = () => {
   const [navToggle, setNavToggle] = useState(false);
+  
   const activeClassName = {
     color: "#093450",
     fontWeight: "900",
@@ -21,11 +22,6 @@ const Navbar = () => {
   const styleActiveLink = ({ isActive }) => {
     return isActive ? activeClassName : notActiveClass;
   };
-
-  // const viewResume = () => {
-  //   document.location =
-  //     "https://drive.google.com/file/d/1Pniow5sTRF7G-T8nkSylORoDUDj1HyNk/view?usp=share_link";
-  // };
 
   return (
     <>
@@ -50,15 +46,27 @@ const Navbar = () => {
           columnGap="2rem"
           height="100%"
           alignItems="center">
-          <Flex w="20rem" justifyContent="space-around">
-            <NavLink style={styleActiveLink} to="/#projects">
-              <Text color="primary">Project</Text>
+          <Flex
+            className="navbar-container"
+            w="20rem"
+            justifyContent="space-around">
+            <NavLink
+              style={styleActiveLink}
+              hoverStyle={{ fontWeight: "900" }}
+              to="/#projects">
+              <Text _hover={{ fontWeight: "900 !important" }} color="primary">
+                Project
+              </Text>
             </NavLink>
             <NavLink style={styleActiveLink} to="/about-me">
-              <Text color="primary">About Me</Text>
+              <Text _hover={{ fontWeight: "900 !important" }} color="primary">
+                About Me
+              </Text>
             </NavLink>
             <NavLink style={styleActiveLink} to="/contact-me">
-              <Text color="primary">Contact Me</Text>
+              <Text _hover={{ fontWeight: "900 !important" }} color="primary">
+                Contact Me
+              </Text>
             </NavLink>
           </Flex>
           <Box>
