@@ -190,7 +190,7 @@ const Home = () => {
         </Box>
       )}
       <Box
-        zIndex="9999"
+        zIndex="99"
         position="relative"
         top={{ base: "70vh", md: "100vh" }}
         h="fit-content"

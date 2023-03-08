@@ -30,7 +30,7 @@ function App() {
           <Box position="fixed" w="100vw" zIndex={100}>
             <Navbar />
           </Box>
-          <Box pt="3rem">
+          <Box pt="3rem" zIndex="99">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about-me" element={<AboutMe />} />
