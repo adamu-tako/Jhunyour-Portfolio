@@ -24,6 +24,7 @@ function App() {
         bgPosition="fixed"
         bgSize="cover"
         bgRepeat="no-repeat"
+        scrollPaddingTop="600px"
         minH="30vh">
         <Box minH="calc(80vh - 100px)">
           <Box position="fixed" w="100vw" zIndex={100}>
