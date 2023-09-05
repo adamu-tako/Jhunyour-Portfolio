@@ -195,6 +195,7 @@ const Home = () => {
         top={{ base: "70vh", md: "100vh" }}
         h="fit-content"
         bgColor="white"
+        opacity="0
         w={{ base: "100%", md: "100%" }}>
         <Box bgColor="white">
           <Box
