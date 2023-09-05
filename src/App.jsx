@@ -23,6 +23,7 @@ function App() {
         bgImage={Bg}
         bgPosition="fixed"
         bgSize="cover"
+        opacity="0"
         bgRepeat="no-repeat"
         scrollPaddingTop="600px"
         minH="30vh">
